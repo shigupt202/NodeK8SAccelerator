@@ -3,41 +3,37 @@
     "version": "1.0.0",
     "description": "An accelerator for node js application which deploys to kubernetes",
     "Tags": [
-        "Node",
-        "K8s"
+        "node",
+        "kubernetes",
+        "none"
     ],
     "inputs": {
         "secrets": [
             {
                 "name": "KUBECONFIG",
-                "label": "Kubeconfig of the target cluster"
+                "description": "Kubeconfig of the target cluster"
             },
             {
                 "name": "DOCKER_PASSWORD",
-                "label": "Password for the docker registry"
+                "description": "Password for the docker registry"
             }
         ],
         "placeHolders": [
             {
-                "File": ".github/workflows/ci.yaml",
-                "Variables": [
-                    {
-                        "name": "DOCKER_USERNAME",
-                        "label": "Docker username"
-                    },
-                    {
-                        "name": "IMAGE_NAME",
-                        "label": "Name of the image to be built and pushed"
-                    },
-                    {
-                        "name": "IMAGE_SECRET",
-                        "label": "Name of image pull secret"
-                    },
-                    {
-                        "name": "NAMESPACE",
-                        "label": "Kubernetes namespace"
-                    }
-                ]
+                "name": "DOCKER_USERNAME",
+                "description": "Docker username"
+            },
+            {
+                "name": "IMAGE_NAME",
+                "description": "Name of the image to be built and pushed"
+            },
+            {
+                "name": "IMAGE_SECRET",
+                "description": "Name of image pull secret"
+            },
+            {
+                "name": "NAMESPACE",
+                "description": "Kubernetes namespace"
             }
         ]
     },
