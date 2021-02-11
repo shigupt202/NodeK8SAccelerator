@@ -49,7 +49,7 @@ jobs:
         manifests: |
           manifests/*.yaml
         images: |
-          ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          ${{ env.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
         imagepullsecrets: |
           ${{ env.IMAGE_SECRET }}
         namespace: ${{ env.NAMESPACE }}
