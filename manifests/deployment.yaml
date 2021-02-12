@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: ${{ acc.IMAGE_NAME }}
-        image: ${{ acc.DOCKER__USERNAME }}/${{ acc.IMAGE_NAME }}
+        image: ${{ acc.DOCKER_USERNAME }}/${{ acc.IMAGE_NAME }}
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
